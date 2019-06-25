@@ -1,4 +1,3 @@
-// BMIの計算クラスを定義
 class BMI {
   constructor (height, weight) {
     this.height = height
@@ -17,6 +16,7 @@ class BMI {
     console.log('BMI=', this.bmi, res)
   }
 }
-// テスト
-const bmi = new BMI(160, 60)
+
+const bmi = new BMI(160,60)
 bmi.print()
+

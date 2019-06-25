@@ -5,7 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.add = add;
 exports.mul = mul;
-// 外部に公開する関数を定義
 function add(a, b) {
   return a + b;
 }

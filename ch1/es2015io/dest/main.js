@@ -1,8 +1,10 @@
 'use strict';
 
-var _calctest = require('./calctest.js');
+var _kakezan = require('./kakezan');
 
-// 取り込んだ関数を利用する
-console.log((0, _calctest.add)(2, 3)); // 自作の計算モジュール「calctest.js」を取り込む
+var _kakezan2 = _interopRequireDefault(_kakezan);
 
-console.log((0, _calctest.mul)(6, 8));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var v = (0, _kakezan2.default)(2, 3);
+console.log(v);

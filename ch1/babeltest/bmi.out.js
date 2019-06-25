@@ -4,7 +4,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// BMIの計算クラスを定義
 var BMI = function () {
   function BMI(height, weight) {
     _classCallCheck(this, BMI);
@@ -31,8 +30,6 @@ var BMI = function () {
 
   return BMI;
 }();
-// テスト
-
 
 var bmi = new BMI(160, 60);
 bmi.print();
