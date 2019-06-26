@@ -6,16 +6,20 @@
 </head><body>
   <div id="root"></div>
   <script type="text/babel">
-    // 定期的に時間を表示
     setInterval(showClock, 1000)
-    // 毎秒実行される関数
+
     function showClock () {
       const d = new Date()
-      const hour = d.getHours()
-      const min = d.getMinutes()
-      const sec = d.getSeconds()
+      const [hour, min, sec] = [
+        d.getHours(),
+        d.getMinutes(),
+        d.getSeconds()]
+      const z2 = (v) => {
+        const s = "00" + v
+        return s.substr(s.length - 2, 2)
+      }
       const elem = <div>
-          {hour}:{min}:{sec}
+          {z2(hour)}:{z2(min)}:{z2(sec)}
         </div>;
       const root = document.getElementById("root")
       ReactDOM.render(elem, root)

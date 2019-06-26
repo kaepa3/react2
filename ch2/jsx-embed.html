@@ -5,12 +5,9 @@
 </head><body>
   <div id="root"></div>
   <script type="text/babel">
-    // 変数の宣言 --- (※1)
     const item = "SDカード"
     const value = 1200
-    // HTMLタグの中に変数の値を埋め込む --- (※2)
     const msg = <h1>{item} - {value}円</h1>
-    // render()で描画 --- (※3)
     const elm = document.getElementById("root")
     ReactDOM.render(msg, elm)
   </script>

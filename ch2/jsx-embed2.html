@@ -5,17 +5,14 @@
 </head><body>
   <div id="root"></div>
   <script type="text/babel">
-    // 変数を定義 --- (※1)
     const title = "書道"
-    const imgUrl = "http://uta.pw/shodou/img/28/214.png"
-    // JSXで要素を定義 --- (※2)
-    const msg =
+    const imgUrl = "http://uta.pw/shodou/img/28/214.PNG"
+    const msg = 
       <div>
         <h1>{title}</h1>
         <p><img src={imgUrl} /></p>
       </div>
-    // render()で描画 --- (※3)
     const elm = document.getElementById("root")
-    ReactDOM.render(msg, elm)
+    ReactDOM.render(msg,elm)
   </script>
 </body></html>

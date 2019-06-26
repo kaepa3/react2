@@ -6,17 +6,25 @@
 </head><body>
   <div id="root"></div>
   <script type="text/babel">
-    // ReactでDOMを書き換える
     ReactDOM.render(
       getDOM(),
       document.getElementById('root')
     );
-    // 要素を返す関数
     function getDOM() {
+      const css1 = {
+        "color": 'red',
+        "background-color": '#f0f0ff',
+        "font-size": '2em'
+      }
+      const css2 = {
+        "color": 'blue',
+        "background-color": '#fff0f0',
+        "font-size": '2em'
+      }
       return (
         <div>
-          <p>探すのに時があり</p>
-          <p>捨てるのに時がある</p>
+          <p style={css1} >探すのに時があり</p>
+          <p style={css2} >捨てるのに時がある</p>
         </div>
       )
     }
