@@ -6,32 +6,30 @@
 </head><body>
   <div id="root"></div>
   <script type="text/babel">
-    // リストコンポーネントを定義
-    class RList extends React.Component {
-      render () {
-        // items属性に指定した値から配列itemsを利用 --- (※1)
-        const items = this.props.items.split(",")
-        // アイテム一覧からli要素を作成 --- (※2)
-        const itemsObj = items.map(
-          (e) => {
-            return <li>{e}</li>
-          })
-        // タイトル
-        let title = this.props.title
-        if (!title) title = "LIST"
-        // 描画内容を返す
-        return (<div>
-          <h3>{title}</h3>
-          <ul>{itemsObj}</ul>
-        </div>)
-      }
-    }
-    // コンポーネントを表示する --- (※3)
-    ReactDOM.render(
-      <RList
-        title="Colors"
-        items="Red,Green,Blue,White" />,
-      document.getElementById('root')
-    )
+      class RList extends React.Component {
+        render () {
+            const items = this.props.items.split(",")
+            const itemsObj = items.map(
+                (e) => {
+                    return <li>{e}</li>
+                })
+                let title = this.props.title
+                if (!title) title = "LIST"
+                return ( <div>
+                    <h3>{title}</h3>
+                    <ul>{itemsObj}</ul>
+                </div>)
+            }
+        }
+        ReactDOM.render(
+            <div>
+                <RList 
+                    title="果物"
+                    items="バナナ,りんご,いちご" />
+                <RList 
+                    title="Colors"
+                    items="Red,Green,Blue,White" />
+            </div>,
+            document.getElementById('root'))
   </script>
 </body></html>

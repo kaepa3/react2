@@ -6,28 +6,24 @@
 </head><body>
   <div id="root"></div>
   <script type="text/babel">
-    // 状態を持った時計コンポーネントの定義 --- (※1)
     class SClock extends React.Component {
       constructor (props) {
-        super(props)
-        // 状態の初期化 --- (※2)
+        super()
         this.state = {
           now: (new Date())
         }
-        // 毎秒状態を更新する --- (※3)
         setInterval(e => {
           this.setState({ now: (new Date()) })
-        }, 1000)
+        },1000)
       }
-      // 描画内容を返す --- (※4)
       render () {
         const now = this.state.now
         const hh = this.fmt(now.getHours())
         const mm = this.fmt(now.getMinutes())
         const ss = this.fmt(now.getSeconds())
-        return (<div>{hh}:{mm}:{ss}</div>)
+        return (<div> {hh}:{mm}:{ss}</div>)
       }
-      fmt (v) {
+      fmt(v){
         const s = "00" + v
         return s.substr(s.length - 2, 2)
       }

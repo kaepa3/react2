@@ -6,29 +6,22 @@
 </head><body>
   <div id="root"></div>
   <script type="text/babel">
-    // 状態を持ったコンポーネントの定義 --- (※1)
     class CBox extends React.Component {
-      // コンストラクタ --- (※2)
       constructor (props) {
         super(props)
-        // 状態の初期化
         this.state = {checked: false}
       }
       render () {
-        // 未チェックの状態 --- (※3)
         let mark = '□'
         let bstyle = { fontWeight: 'normal' }
-        // チェックされているか --- (※4)
         if (this.state.checked) {
           mark = '■'
           bstyle = { fontWeight: 'bold' }
         }
-        // クリックした時のイベントを指定 --- (※5)
         const clickHandler = (e) => {
           const newValue = !this.state.checked
           this.setState({checked: newValue})
         }
-        // 描画内容を返す --- (※6)
         return (
           <div onClick={clickHandler} style={bstyle}>
             {mark} {this.props.label}
