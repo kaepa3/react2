@@ -1,47 +1,48 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react';
 class App extends Component {
-  // マウント
   constructor (props) {
     super(props)
     console.log('constructor')
   }
-  componentWillMount () {
+  componentWillMount() {
     console.log('componentWillMount')
   }
-  componentDidMount () {
+  componentDidMount() {
     console.log('componentDidMount')
-  }
-  // 更新
-  componentWillReceiveProps (nextProps) {
+  } 
+  componentWillReceiveProps(nextProps) {
     console.log('componentWillReceiveProps')
   }
-  shouldComponentUpdate (nextProps, nextState) {
+  shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate')
     return true
   }
-  componentWillUpdate () {
+  componentWillUpdate() {
     console.log('componentWillUpdate')
   }
-  componentDidUpdate () {
+
+  componentDidUpdate() {
     console.log('componentDidUpdate')
   }
-  // アンマウント
-  componentWillUnmount () {
+  componentWillUnmount() {
     console.log('componentWillUnmount')
   }
-  render () {
+  render() {
     console.log('render')
-    const setStateHandler = (e) => {
+    const setStateHandler =(e) => {
       console.log('* call setState()')
       this.setState({r: Math.random()})
     }
     return (
       <div>
         <button onClick={setStateHandler}>
-        setState</button>
+      setState</button>
       </div>
     )
   }
 }
 
-export default App
+
+export default App;
+
+

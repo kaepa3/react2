@@ -1,8 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Stopwatch from './Stopwatch'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import StopWatch from './StopWatch.js'
 
-ReactDOM.render(
-  <Stopwatch />,
-  document.getElementById('root')
-)
+ReactDOM.render(<StopWatch />, document.getElementById('root'));
+
