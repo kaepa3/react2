@@ -9,28 +9,25 @@
     class MyCompo extends React.Component {
       constructor (props) {
         super(props)
-        this.state = { value: '' }
+        this.state = {value: ''}
       }
-      render () {
-        this.preInput = <input
-          type='text'
-          ref={i => { this.realInput = i }}
-          onClick={e => this.doClick(e)} />
-        return (<div>
-          {this.preInput}
-        </div>)
+      render() {
+        this.preInput =<input type='text' 
+        ref={ i=> this.realInput=i}
+        onClick={e=>this.doClick(e)} />
+        return (
+          <div>{this.preInput}</div>)
       }
-      doClick (e) {
-        // 合致するか？
+      doClick(e) {
         console.log(this.preInput)
         console.log(this.realInput)
-        if (this.preInput === this.realInput) {
+        if(this.preInput === this.realInput) {
           console.log('同じ')
         } else {
           console.log('異なる')
         }
-      }
-    }
+       }
+     }
     // DOMを書き換え
     ReactDOM.render(<div><MyCompo /></div>,
       document.getElementById('root'))
